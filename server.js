@@ -15,7 +15,13 @@ io.on('connection', function (socket) {
     }
     socket.on("send message", function (data) {
         messages.push(data);
-      
+
         io.sockets.emit("display message", data);
+    });
+    socket.on("Delete message", function () {
+        messages = [];
+
+
+        io.sockets.emit("de jnjeq");
     });
 });

@@ -20,13 +20,22 @@ function main() {
         p.innerText = msg;
         chatDiv.appendChild(p);
         input.value = "";
-}
+    }
+    function DeleteFromDom() {
+        var p = document.getElementsByTagName("p");
+        for(var i in p){
+            
+            if(p.length > 0)
+            chatDiv.removeChild(p[0]);
+        }
+
+    }
 
 
 
 
-
-socket.on('display message', handleMessage);
+    socket.on('de jnjeq', DeleteFromDom);
+    socket.on('display message', handleMessage);
 } // main closing bracket
 
 window.onload = main;
